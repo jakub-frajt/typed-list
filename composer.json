@@ -1,0 +1,38 @@
+{
+  "name": "jakub-frajt/typed-list",
+  "description": "The array data types that contains only specific type of values. Substitution of missing generic types in PHP. ",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jakub Frajt",
+      "email": "mail@jakubfrajt.cz",
+      "homepage": "https://www.jakubfrajt.cz"
+    }
+  ],
+  "require": {
+    "php": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Frajt\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Frajt\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.3",
+    "phpstan/phpstan": "^0.12.37"
+  },
+  "scripts": {
+    "tests:unit": "./vendor/bin/phpunit tests --configuration phpunit.xml",
+    "phpstan": "./vendor/bin/phpstan analyse",
+    "pre-commit": [
+      "@tests:unit",
+      "@phpstan"
+    ]
+  }
+}
