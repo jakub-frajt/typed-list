@@ -26,6 +26,12 @@ class IntegerListTest extends TestCase
             'numeric values with last value as string' => [
                 [1, 2, 3, 'test'],
             ],
+            'numeric values with array' => [
+                [1, 2, [1]]
+            ],
+            'numeric values with object' => [
+                [new \stdClass(), 2, 3]
+            ]
         ];
     }
 

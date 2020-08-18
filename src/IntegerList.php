@@ -20,7 +20,10 @@ class IntegerList implements \Countable, \Iterator
         foreach ($data as $item) {
             if (is_numeric($item) === false) {
                 throw new \InvalidArgumentException(
-                    sprintf('Each item of IntegerList must be a numeric value, "%s" given.', $item)
+                    sprintf(
+                        'Each item of IntegerList must be a numeric value, "%s" given.',
+                        is_scalar($item) ? $item : gettype($item)
+                    )
                 );
             }
 
