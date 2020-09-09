@@ -6,3 +6,5 @@ install: composer install
 script:
   - composer run tests:unit
   - composer run phpstan
+notifications:
+  email: false
