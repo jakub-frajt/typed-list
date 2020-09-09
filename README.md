@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/jakub-frajt/typed-list.svg?branch=master)](https://travis-ci.org/jakub-frajt/typed-list)
