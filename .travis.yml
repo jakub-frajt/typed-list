@@ -2,6 +2,9 @@ language: php
 php:
   - '7.3'
   - '7.4'
+cache:
+  directories:
+    - $HOME/.composer/cache
 install: composer install
 script:
   - composer run tests:unit
