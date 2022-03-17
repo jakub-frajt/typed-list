@@ -5,15 +5,8 @@ namespace Frajt;
 
 class IntegerList implements \Countable, \Iterator
 {
-    /**
-     * @var int
-     */
-    private $position = 0;
-
-    /**
-     * @var array
-     */
-    private $data = [];
+    private int $position = 0;
+    private array $data = [];
 
     public function __construct(array $data)
     {
@@ -37,10 +30,7 @@ class IntegerList implements \Countable, \Iterator
         return \count($this->data);
     }
 
-    /**
-     * @return mixed
-     */
-    public function current()
+    public function current(): mixed
     {
         return $this->data[$this->position];
     }
